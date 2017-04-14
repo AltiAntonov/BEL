@@ -1,0 +1,18 @@
+<body>
+  <div class="container">
+    <header>
+      <h1>List</h1>
+    </header>
+    <ul class="nav nav-tabs">
+      <li role="presentation" class="{{#unless showQuestions}}active{{/unless}}">
+        <a id="showList">Покажи Лист с произведения</a>
+        <p></p>
+      </li>
+      <li role="presentation" class="{{#if showQuestions}}active{{/if}}">
+        <a id="showQuestions">Покажи Въпроси</a>
+        <p></p>
+      </li>
+    </ul>
+    {{#if showQuestions}} {{> questions}} {{else}} {{> info}} {{/if}}
+  </div>
+</body>
